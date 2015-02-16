@@ -34,8 +34,8 @@ void loop() {
  double pre_outer_wheel_speed = outer_wheel_ratio * throttle;                                                             
  
  // map throttle value to output to motor  
- long inner_wheel_speed = map(pre_inner_wheel_speed, 0, 1023, 0, 255);                                                    
- long outer_wheel_speed = map(pre_outer_wheel_speed, 0, 1023, 0, 255);                                                  
+ int inner_wheel_speed = map(pre_inner_wheel_speed, 0, 1023, 0, 255);                                                    
+ int outer_wheel_speed = map(pre_outer_wheel_speed, 0, 1023, 0, 255);                                                  
 
  // write value to motors
  analogWrite(inner_wheel,inner_wheel_speed);
